@@ -77,3 +77,6 @@ HELP.md
 
 # Local 환경 파일 (예: Minikube 바이너리 등)
 ch9-helm/exercises/ex01/minikube-linux-amd64
+
+# Gradle Wrapper 예외 처리 (가장 마지막에 둘 것!)
+!apps/todo-list/backend/gradle/wrapper/gradle-wrapper.jar
