@@ -16,4 +16,4 @@ jobs:
       run: chmod +x gradlew  # ✅ 이거 꼭 필요!
 
     - name: Build with Gradle (skip tests)
-      run: ./gradlew build -x test
+      run: ./gradlew build
