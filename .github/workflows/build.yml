@@ -1,0 +1,19 @@
+name: Java CI
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout source code
+      uses: actions/checkout@v3
+
+    - name: Grant execute permission to gradlew
+      run: chmod +x gradlew  # ✅ 이거 꼭 필요!
+
+    - name: Build with Gradle (skip tests)
+      run: ./gradlew build -x test
