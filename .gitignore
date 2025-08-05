@@ -65,7 +65,13 @@ buildNumber.properties
 # Gradle
 .gradle/
 build/
+
+# Wrapper 디렉토리와 파일 포함 예외 처리
+!gradle/
+!gradle/wrapper/
 !gradle/wrapper/gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.properties
+
 
 # 환경파일
 *.war
