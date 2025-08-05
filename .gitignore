@@ -1,5 +1,4 @@
 # Node.js
-gemini/
 node_modules/
 npm-debug.log*
 yarn-debug.log*
@@ -7,12 +6,10 @@ yarn-error.log*
 .pnp/
 .pnp.js
 
-# React (Create React App specific)
+# React
 build/
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+.env*
+.env.*.local
 
 # macOS
 .DS_Store
@@ -25,7 +22,7 @@ Desktop.ini
 # VS Code
 .vscode/
 
-# IDEs (e.g., IntelliJ, WebStorm)
+# IDEs
 .idea/
 *.iml
 *.ipr
@@ -35,25 +32,33 @@ Desktop.ini
 *.log
 log/
 
-# Temporary files
+# Temp
 *.tmp
 *~
 ~*
 
-# Kubernetes specific (if any local generated files)
-# For example, if you generate kubeconfig files locally
-# .kube/config
-
 # Docker
 *.swp
-.dockerignore # This file itself should be committed, but adding it here as a reminder
+.dockerignore
 
-# =========================
-# Spring Boot (Java) 추가
-# =========================
+# Spring Boot / Java
+*.class
+*.jar
+*.war
+*.tmp
+bin/
+out/
+target/
+build/
+.gradle/
+
+# Gradle Wrapper 예외 처리 (중요!)
+!gradle/
+!gradle/wrapper/
+!gradle/wrapper/gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.properties
 
 # Maven
-target/
 pom.xml.tag
 pom.xml.releaseBackup
 pom.xml.versionsBackup
@@ -62,38 +67,13 @@ release.properties
 dependency-reduced-pom.xml
 buildNumber.properties
 
-# Gradle
-.gradle/
-build/
-
-# Wrapper 디렉토리와 파일 포함 예외 처리
-!gradle/
-!gradle/wrapper/
-!gradle/wrapper/gradle-wrapper.jar
-!gradle/wrapper/gradle-wrapper.properties
-
-
-# 환경파일
-*.war
-*.jar
-
 # Eclipse
 *.classpath
 *.project
 *.settings/
 
-# 기타 Java 관련
-*.class
-bin/
-out/
+# 기타
+HELP.md
 
-# Local 개발 환경 변수
-.env
+# Local 환경 파일 (예: Minikube 바이너리 등)
 ch9-helm/exercises/ex01/minikube-linux-amd64
-ch9-helm/exercises/ex01/minikube-linux-amd64
-
-# Ignore Gradle project-specific cache directory
-.gradle
-
-# Ignore Gradle build output directory
-build
